@@ -1,0 +1,33 @@
+@baseUrl = https://8080-emilytsen-apitarefa1-m0dyaw8ssqp.ws-us115.gitpod.io/
+
+//mostrar todos os itens
+###
+GET {{baseUrl}}/tarefas
+
+//criar 1 item
+###
+POST {{baseUrl}}/tarefas
+Content-Type: application/json
+
+{
+    "descricao": "Tarefa2",
+    "concluido": 0
+}
+
+//pesquisa pelo id do item
+###
+GET {{baseUrl}}/tarefas/2
+
+//atualizar um id especifico 
+###
+PUT {{baseUrl}}/tarefas/1
+Content-Type: application/json
+
+{
+    "descricao": "tarefa11",
+    "concluido": 0
+}
+
+//deletar pelo id
+###
+DELETE {{baseUrl}}/tarefas/2
